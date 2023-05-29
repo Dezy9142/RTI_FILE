@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/05d71ec5ea.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="mainHead">RTI AND CONSUMER CASE</h1>
+    <p class="subHead">This Web Portal can be used by Indian citizens to file RTI application online and also to make payment for RTI
+      application online. First appeal can also be filed online.</p>
+    <div class="btn-container">
+      <input type="button" value="Consumer Case" class="open consumer" onclick="openModal1()">
+      <input type="button" value="RTI Filing" class="open rti" onclick="openModal2()">
+    </div>
+  </div>
+  <div class="container">
+    <div class="form modal1">
+      <button  onclick="closeModal1()" id="close-btn">CLOSE</button>
+     
+      
+     
+      <h2>CONSUMER CASE FORM</h2>
+      <form>
+
+        <label for="case-name">Name:</label>
+        <input type="text" id="case-name" name="case-name" required>
+
+        <label for="case-email">Email:</label>
+        <input type="email" id="case-email" name="case-email" required>
+
+        <label for="case-contact">Contact No:</label>
+        <input type="tel" id="case-contact" name="case-contact" required>
+
+        <label for="case-dispute">Brief Your Dispute:</label> <br>
+        <textarea id="case-dispute" name="case-dispute" rows="4" required></textarea> <br>
+
+        <label for="case-state">State:</label>
+        <input type="text" id="case-state" name="case-state" required>
+
+        <div class="checkbox">
+          <input type="checkbox" id="case-agree" name="case-agree" required>
+          <label for="case-agree">**Agree to all terms and conditions of Refund and Privacy Policy</label>
+        </div>
+
+        <label for="case-payment">Payment Method:</label>
+        <select id="case-payment" name="case-payment" required>
+          <option value="paynow">Pay Now</option>
+          <option value="upi">UPI ID</option>
+          <option value="paylater">Pay Later</option>
+        </select>
+        <label for="file">Fee Details:</label>
+        <input type="file" id="file" name="file">
+        <div class="button-container">
+          <input type="submit" class="button" id="submit-btn" value="Submit">
+
+        </div>
+      </form>
+    </div>
+
+    <div class="form modal2">
+      <div class="rti-head">
+        <button  onclick="closeModal2()" id="close-btn">CLOSE</button>
+    <!-- <button type="submit"  id="close-btn" onclick="closeModal2()" value="CLOSE" </button> -->
+      <h2 class="rti-head">RTI FILE FORM</h2>
+      </div>
+      <form>
+        <label for="rti-name">Name:</label>
+        <input type="text" id="rti-name" name="rti-name" required>
+
+        <label for="rti-email">Email:</label>
+        <input type="email" id="rti-email" name="rti-email" required>
+
+        <label for="rti-contact">Contact No:</label>
+        <input type="tel" id="rti-contact" name="rti-contact" required>
+
+        <label for="rti-brief">Information you are looking For:</label> <br>
+        <textarea id="rti-brief" name="rti-brief" rows="4" required></textarea><br>
+
+        <label for="rti-state">State:</label>
+        <input type="text" id="rti-state" name="rti-state" required>
+
+        <div class="checkbox">
+          <input type="checkbox" id="rti-agree" name="rti-agree" required>
+          <label for="rti-agree">**Agree to all terms and conditions of Refund and Privacy Policy</label>
+        </div>
+
+        <label for="rti-payment">Payment Method:</label>
+        <select id="rti-payment" name="rti-payment" required>
+          <option value="paynow">Pay Now</option>
+          <option value="upi">UPI ID</option>
+          <option value="paylater">Pay Later</option>
+        </select>
+        <label for="file">Fee Details:</label>
+        <input type="file" id="file" name="file">
+
+        <div class="button-container">
+          <input type="submit" class="button " id="submit-btn" value="Submit">
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
